@@ -2,15 +2,29 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import java.time.Duration;
 
 public class TimePage {
     private WebDriver driver;
+    private WebDriverWait wait;
+
+    private By header = By.tagName("h6");
+    private By employeeNameInput = By.xpath("//input[@placeholder='Type for hints...']");
+    private By viewButton = By.xpath("//button[@type='submit']");
 
     public TimePage(WebDriver driver) {
         this.driver = driver;
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
     public String getPageHeader() {
-        return driver.findElement(By.tagName("h6")).getText();
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(header)).getText();
+    }
+
+    public void viewTimesheet(String name) {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(employeeNameInput)).sendKeys(name);
+        driver.findElement(viewButton).click();
     }
 }

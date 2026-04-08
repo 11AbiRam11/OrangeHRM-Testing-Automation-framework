@@ -1,0 +1,39 @@
+1. Complete Manual testing test cases. 
+   It should includes
+   Sheet 1:
+   Project Detail
+   Sheet 2:
+   Test Plan Document
+   Sheet 3:
+   Test Scenaria
+   Sheet 4,5,6...
+   Test cases for each module
+   Sheet 9
+   RTM
+   Sheet 10
+   Defect Report
+   Sheet 11
+   Test Summary
+   Usability Testing
+   Security Testing
+
+2. AUtomation Testing
+   Choose test cases for automation
+   create test script in testNG framework
+   Data driven testing
+   cross browser testing
+   parallel testing
+   failed test case screenshot
+   report
+   
+
+3. How to run your project through pom.xml
+4. How to run your project in command prompt
+5. How to run your project as a executable file
+6. Upload your project in GitHub using Git
+7. How to run your project from remote repository using Jenkins
+8. Reports
+
+
+
+   

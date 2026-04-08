@@ -11,8 +11,14 @@ public class LoginPage {
     private By passwordInput = By.name("password");
     private By loginButton = By.xpath("//button[@type='submit']");
 
+    private By errorMessage = By.xpath("//div[@class='oxd-alert-content oxd-alert-content--error']/p");
+
     public LoginPage(WebDriver driver) {
         this.driver = driver;
+    }
+
+    public String getErrorMessage() {
+        return driver.findElement(errorMessage).getText();
     }
 
     public void enterUsername(String username) {
